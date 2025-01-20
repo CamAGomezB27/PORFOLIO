@@ -18,8 +18,8 @@ const { title } = Astro.props
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
 
+	<body>
 		<Header />
 		<slot />
 	</body>
@@ -37,7 +37,7 @@ const { title } = Astro.props
 		height: 100vh;
 		margin: 0;
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
 	}
 	
 </style>
