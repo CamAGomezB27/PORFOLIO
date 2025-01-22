@@ -7,6 +7,8 @@ import SocialPill from '../components/icons/SocialPill.astro'
 import GithubIcon from '../components/icons/Github.astro'
 import MailIcon from '../components/icons/Mail.astro'
 import Experencia from '../components/Experencia.astro'
+import SectionContainer from '../components/SectionContainer.astro'
+import Briefcase from '../components/icons/Briefcase.astro'
 ---
 
 <Layout 
@@ -16,7 +18,7 @@ import Experencia from '../components/Experencia.astro'
 
 
 	<main>
-		<section  class="w-full lg:w-[740px] mx-auto py-10">
+		<SectionContainer class="py-40 pb-20">
 			<div class="rounded-full w-24 h-24 overflow-hidden">
 				<img 
 					class="w-full h-full object-cover object-top" 
@@ -56,10 +58,14 @@ import Experencia from '../components/Experencia.astro'
 						camigomezbernal@gmail.com
 					</SocialPill>
 			</nav>
-		</section>
+		</SectionContainer>
 
-		<section>
+		<SectionContainer>
+			<h2 class="text-2xl font-semibold mb-5 flex gap-x-2 items-center">
+				<Briefcase class="size-6"/>
+				Experencia Laboral
+			</h2>
 			<Experencia />
-		</section>
+		</SectionContainer>
 	</main>
 </Layout>
