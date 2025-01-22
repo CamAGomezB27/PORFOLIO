@@ -1,0 +1,35 @@
+---
+import { date } from "astro:schema"
+import ExperenciaItem from "./ExperenciaItem.astro"
+
+const EXPERENCIE = [
+    {
+        date: 'Enero 2025',
+        title: 'Experencia',
+        description: 'Hola',
+        link:'fdgfdsfgdg'
+    },
+    {
+        date: 'Enero 2025',
+        title: 'Experencia',
+        description: 'Hola',
+        link:'fdgfdsfgdg'
+    },
+    {
+        date: 'Enero 2025',
+        title: 'Experencia',
+        description: 'Hola',
+        link:'fdgfdsfgdg'
+    }
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+        EXPERENCIE.map(experiencie => (
+        <li class="mb-10 ms-4">
+            <ExperenciaItem {...experiencie} />
+        </li>
+        ))
+    }
+</ol>

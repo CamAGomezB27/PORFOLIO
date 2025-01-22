@@ -5,17 +5,25 @@ import Layout from '../layouts/Layout.astro'
 import LinkedInIcon from '../components/icons/LinkedIn.astro'
 import SocialPill from '../components/icons/SocialPill.astro'
 import GithubIcon from '../components/icons/Github.astro'
+import MailIcon from '../components/icons/Mail.astro'
+import Experencia from '../components/Experencia.astro'
 ---
 
-<Layout title="Welcom to Astro.">
-	<main>
+<Layout 
+	title="Portafolio de Camilo Gomez Dev - Desarrollador y Programador web, Gestión de base de datos"
+	description="Contrata a Camilo Gómez para crear tu aplicación web. Desarrollador Web especializado en soluciones únicas con tecnologías como JavaScript, Python y MySQL."
+	>
 
-		<section class="w-full lg:w-[740px] mx-auto py-10">
-			<img 
-            class="rounded-full w-25 h-24 object-cover" 
-			src="/src/assets/Foto Camilodev.jpg"  
-            alt="Camilo dev"
-        />
+
+	<main>
+		<section  class="w-full lg:w-[740px] mx-auto py-10">
+			<div class="rounded-full w-24 h-24 overflow-hidden">
+				<img 
+					class="w-full h-full object-cover object-top" 
+					src="/src/assets/Foto Camilodev.jpg"  
+					alt="Camilo dev"
+				/>
+			</div>
 			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
 				Hola! Soy Camilo Gómez <a 
 				href="https://www.linkedin.com/in/camilogdev"
@@ -34,16 +42,24 @@ import GithubIcon from '../components/icons/Github.astro'
 				<span class="text-red-400/90"> del desarrollo de software</span><span class="opacity-80">, aprendiendo de manera continua para afrontar nuevos desafíos.</span>
 			</h2>
 
-			<nav class="list-none flex gap-x-2">
+			<nav class="list-none flex gap-x-4 mt-8">
 					<SocialPill href="https://www.linkedin.com/in/camilogdev">
-						<LinkedInIcon class="w-6 h-6" />
+						<LinkedInIcon class="size-6" />
 						LinkedIn	
 					</SocialPill>
 					<SocialPill href="https://github.com/CamAGomezB27?tab=repositories">
-						<GithubIcon class="w-6 h-6" />
+						<GithubIcon class="size-6" />
 						GitHub
-					</SocialPill>	
+					</SocialPill>
+					<SocialPill href="mailto:camigomezbernal@gmail.com">
+						<MailIcon class="size-6" />
+						camigomezbernal@gmail.com
+					</SocialPill>
 			</nav>
+		</section>
+
+		<section>
+			<Experencia />
 		</section>
 	</main>
 </Layout>
