@@ -7,6 +7,7 @@ import SocialPill from '../components/icons/SocialPill.astro'
 import GithubIcon from '../components/icons/Github.astro'
 import MailIcon from '../components/icons/Mail.astro'
 import Experencia from '../components/Experencia.astro'
+import Experenciap from '../components/Experenciap.astro'
 import SectionContainer from '../components/SectionContainer.astro'
 import Briefcase from '../components/icons/Briefcase.astro'
 ---
@@ -61,11 +62,18 @@ import Briefcase from '../components/icons/Briefcase.astro'
 		</SectionContainer>
 
 		<SectionContainer>
-			<h2 class="text-2xl font-semibold mb-5 flex gap-x-2 items-center">
+			<h2 class="text-2xl font-semibold mb-5 flex gap-x-3 items-center">
 				<Briefcase class="size-6"/>
 				Experencia Laboral
 			</h2>
 			<Experencia />
+		</SectionContainer>
+		<SectionContainer>
+			<h2 class="text-2xl font-semibold mb-5 flex gap-x-3 items-center">
+				<Briefcase class="size-6"/>
+				Experencia Personal
+			</h2>
+			<Experenciap />
 		</SectionContainer>
 	</main>
 </Layout>
