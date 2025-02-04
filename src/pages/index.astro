@@ -11,6 +11,7 @@ import Experenciap from '../components/Experenciap.astro'
 import SectionContainer from '../components/SectionContainer.astro'
 import Briefcase from '../components/icons/Briefcase.astro'
 import CodeIcon from "../components/icons/Code.astro"
+import Projects from '../components/Projects.astro'
 ---
 
 <Layout 
@@ -63,24 +64,25 @@ import CodeIcon from "../components/icons/Code.astro"
 		</SectionContainer>
 
 		<SectionContainer id="experiencia">
-			<h2 class="text-2xl font-semibold mb-5 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-5 flex gap-x-3 items-center">
 				<Briefcase class="size-6"/>
 				Experencia Laboral
 			</h2>
 			<Experencia />
 		</SectionContainer>
 		<SectionContainer>
-			<h2 class="text-2xl font-semibold mb-5 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-5 flex gap-x-3 items-center">
 				<Briefcase class="size-6"/>
 				Experencia Personal
 			</h2>
 			<Experenciap />
 		</SectionContainer>
-		<SectionContainer>
-			<h2 class="text-2xl font-semibold mb-5 flex gap-x-3 items-center">
-				<CodeIcon class="size-6"/>
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-5 flex gap-x-3 items-center">
+				<CodeIcon class="size-7"/>
 				Proyectos
 			</h2>
+			<Projects />
 		</SectionContainer>
 	</main>
 </Layout>

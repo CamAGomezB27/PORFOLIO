@@ -1,0 +1,65 @@
+---
+import HTML from "./icons/HTML.astro";
+import CSS from "./icons/CSS.astro";
+import JavaScript from "./icons/JavaScript.astro";
+
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-black text-white",
+    icon: HTML,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-black text-white",
+    icon: CSS,
+  },
+  JavaScript: {
+    name: "JavaScript",
+    class: "bg-black text-white",
+    icon: JavaScript,
+  }
+};
+
+const PROJECTS = [
+  {
+    title: "proyecto 1",
+    description:
+      "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T.",
+    link: "#",
+    github: "#",
+    image: "projects/svgl.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript],
+  },
+];
+---
+
+<div>
+  {
+    PROJECTS.map(({ title, description, image, tags }) => (
+      <article>
+        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul>
+          {tags.map((tag) => (
+            <li>
+              {typeof tag === "object" ? ( // Verificamos si `tag` es un objeto
+                <>
+                  <tag.icon class="size-10" />
+                  {tag.name}
+                </>
+              ) : (
+                tag // Si no es un objeto, solo mostramos el texto
+              )}
+            </li>
+          ))}
+        </ul>
+        <img
+          class="rounded shadow-2xl shadow-white/15"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${image}`}
+        />
+      </article>
+    ))
+  }
+</div>
